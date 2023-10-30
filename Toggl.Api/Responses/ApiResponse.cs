@@ -26,7 +26,7 @@ public class ApiResponse
 		var cverts = new List<JsonConverter>();
 		var iso = new IsoDateTimeConverter();
 		cverts.Add(iso);
-
+		
 		if (Method == "DELETE" && StatusCode.Equals(HttpStatusCode.OK))
 		{
 			return (T)Activator.CreateInstance(typeof(T));

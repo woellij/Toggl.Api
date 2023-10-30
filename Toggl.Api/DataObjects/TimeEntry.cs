@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Toggl.Api.DataObjects;
@@ -39,13 +40,13 @@ public class TimeEntry : BaseDataObject
 	/// The Start time
 	/// </summary>
 	[JsonProperty(PropertyName = "start")]
-	public string? Start { get; set; }
+	public DateTimeOffset? Start { get; set; }
 
 	/// <summary>
 	/// The Stop time
 	/// </summary>
 	[JsonProperty(PropertyName = "stop")]
-	public string? Stop { get; set; }
+	public DateTimeOffset? Stop { get; set; }
 
 	/// <summary>
 	/// The duration in seconds
